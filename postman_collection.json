@@ -1,0 +1,196 @@
+{
+  "info": {
+    "_postman_id": "14ecb4be-9885-41a5-ab10-52d2455eda67",
+    "name": "Invoice API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53740418",
+    "_collection_link": "https://go.postman.co/collection/53740418-14ecb4be-9885-41a5-ab10-52d2455eda67?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Invoice",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"client_name\": \"John Doe\",\r\n    \"client_email\": \"john@example.com\",\r\n    \"client_phone\": \"+1234567890\",\r\n    \"due_date\": \"2026-05-01\",\r\n    \"tax\": 19,\r\n    \"discount\": 10,\r\n    \"items\": [\r\n        {\r\n            \"description\": \"Web Development\",\r\n            \"quantity\": 10,\r\n            \"unit_price\": 50\r\n        },\r\n        {\r\n            \"description\": \"UI Design\",\r\n            \"quantity\": 5,\r\n            \"unit_price\": 40\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/invoices",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "invoices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Invoices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/invoices",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "invoices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Invoice",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/invoices/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "invoices",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Invoice Status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\": \"paid\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/invoices/3/status",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "invoices",
+            "3",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Download Invoice PDF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/invoices/3/pdf",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "invoices",
+            "3",
+            "pdf"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Invoice",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/invoices/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "invoices",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dashboard Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/dashboard",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "dashboard"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
